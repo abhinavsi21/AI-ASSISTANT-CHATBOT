@@ -15,13 +15,13 @@ search = DuckDuckGoSearchRun()
 
 # ---------------- Perplexity API key ----------------
 if "PERPLEXITY_API_KEY" not in os.environ or not os.environ["PERPLEXITY_API_KEY"]:
-    api_input = st.text_input("Enter your Perplexity API key:", type="password")
+    api_input = st.text_input("Enter your API key:", type="password")
     if api_input:
         os.environ["PERPLEXITY_API_KEY"] = api_input
 
 api_key = os.environ.get("PERPLEXITY_API_KEY")
 if not api_key:
-    st.warning("Please enter your Perplexity API key to use this app.")
+    st.warning("Please enter your API key to use this app.")
     st.stop()
 
 # ---------------- State definition ----------------
